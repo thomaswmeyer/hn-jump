@@ -1,0 +1,14 @@
+{
+  "manifest_version": 3,
+  "name": "HN Jump",
+  "version": "1.0",
+  "description": "Jump to the Hacker News discussion for the current page, if one exists.",
+  "action": {
+    "default_title": "Find this page on Hacker News"
+  },
+  "background": {
+    "service_worker": "background.js"
+  },
+  "permissions": ["activeTab"],
+  "host_permissions": ["https://hn.algolia.com/*"]
+}

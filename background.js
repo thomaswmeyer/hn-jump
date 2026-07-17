@@ -13,7 +13,7 @@ function normalizeUrl(rawUrl) {
 
 async function findHnDiscussion(pageUrl) {
   const api = new URL("https://hn.algolia.com/api/v1/search");
-  api.searchParams.set("query", pageUrl);
+  api.searchParams.set("query", normalizeUrl(pageUrl));
   api.searchParams.set("restrictSearchableAttributes", "url");
   api.searchParams.set("hitsPerPage", "20");
 
